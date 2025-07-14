@@ -24,7 +24,7 @@ export default function Home() {
                 Welcome to My Business
               </h2>
               <p className="mt-6 text-xl text-gray-500 max-w-3xl mx-auto">
-                Professional services tailored to your needs. Let's work together to achieve your goals.
+                Professional services tailored to your needs. Let&apos;s work together to achieve your goals.
               </p>
               <div className="mt-10">
                 <a
@@ -77,7 +77,7 @@ export default function Home() {
             <div className="text-center">
               <h2 className="text-3xl font-bold text-gray-900">Contact</h2>
               <p className="mt-6 text-lg text-gray-500 max-w-3xl mx-auto">
-                Ready to get started? Let's discuss your project and how I can help you achieve your goals.
+                Ready to get started? Let&apos;s discuss your project and how I can help you achieve your goals.
               </p>
               <div className="mt-10 flex justify-center space-x-8">
                 <a href="mailto:your-email@example.com" className="text-blue-600 hover:text-blue-800">
