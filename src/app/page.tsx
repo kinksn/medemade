@@ -8,9 +8,15 @@ export default function Home() {
               <h1 className="text-2xl font-bold text-gray-900">Your Name</h1>
             </div>
             <nav className="hidden md:flex space-x-8">
-              <a href="#about" className="text-gray-500 hover:text-gray-900">About</a>
-              <a href="#services" className="text-gray-500 hover:text-gray-900">Services</a>
-              <a href="#contact" className="text-gray-500 hover:text-gray-900">Contact</a>
+              <a href="#about" className="text-gray-500 hover:text-gray-900">
+                About
+              </a>
+              <a href="#services" className="text-gray-500 hover:text-gray-900">
+                Services
+              </a>
+              <a href="#contact" className="text-gray-500 hover:text-gray-900">
+                Contact
+              </a>
             </nav>
           </div>
         </div>
@@ -24,7 +30,8 @@ export default function Home() {
                 Welcome to My Business
               </h2>
               <p className="mt-6 text-xl text-gray-500 max-w-3xl mx-auto">
-                Professional services tailored to your needs. Let&apos;s work together to achieve your goals.
+                Professional services tailored to your needs. Let&apos;s work
+                together to achieve your goals.
               </p>
               <div className="mt-10">
                 <a
@@ -43,8 +50,10 @@ export default function Home() {
             <div className="text-center">
               <h2 className="text-3xl font-bold text-gray-900">About Me</h2>
               <p className="mt-6 text-lg text-gray-500 max-w-3xl mx-auto">
-                I am a dedicated professional with years of experience in providing high-quality services. 
-                My expertise and commitment to excellence ensure that every project meets the highest standards.
+                I am a dedicated professional with years of experience in
+                providing high-quality services. My expertise and commitment to
+                excellence ensure that every project meets the highest
+                standards.
               </p>
             </div>
           </div>
@@ -56,16 +65,28 @@ export default function Home() {
               <h2 className="text-3xl font-bold text-gray-900">Services</h2>
               <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Service 1</h3>
-                  <p className="text-gray-600">Description of your first service offering.</p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                    Service 1
+                  </h3>
+                  <p className="text-gray-600">
+                    Description of your first service offering.
+                  </p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Service 2</h3>
-                  <p className="text-gray-600">Description of your second service offering.</p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                    Service 2
+                  </h3>
+                  <p className="text-gray-600">
+                    Description of your second service offering.
+                  </p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Service 3</h3>
-                  <p className="text-gray-600">Description of your third service offering.</p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                    Service 3
+                  </h3>
+                  <p className="text-gray-600">
+                    Description of your third service offering.
+                  </p>
                 </div>
               </div>
             </div>
@@ -77,13 +98,20 @@ export default function Home() {
             <div className="text-center">
               <h2 className="text-3xl font-bold text-gray-900">Contact</h2>
               <p className="mt-6 text-lg text-gray-500 max-w-3xl mx-auto">
-                Ready to get started? Let&apos;s discuss your project and how I can help you achieve your goals.
+                Ready to get started? Let&apos;s discuss your project and how I
+                can help you achieve your goals.
               </p>
               <div className="mt-10 flex justify-center space-x-8">
-                <a href="mailto:your-email@example.com" className="text-blue-600 hover:text-blue-800">
+                <a
+                  href="mailto:your-email@example.com"
+                  className="text-blue-600 hover:text-blue-800"
+                >
                   Email: your-email@example.com
                 </a>
-                <a href="tel:+1234567890" className="text-blue-600 hover:text-blue-800">
+                <a
+                  href="tel:+1234567890"
+                  className="text-blue-600 hover:text-blue-800"
+                >
                   Phone: +1 (234) 567-890
                 </a>
               </div>
