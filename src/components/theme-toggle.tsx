@@ -1,40 +1,43 @@
-"use client"
-
-import * as React from "react"
-import { Moon, Sun } from "lucide-react"
-import { useTheme } from "next-themes"
-
-import { Switch } from "@/components/ui/switch"
+// components/theme-toggle.tsx
+"use client";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
+import { Switch } from "@/components/ui/switch";
+import { Sun, Moon } from "lucide-react";
 
 export function ThemeToggle() {
-  const { theme, setTheme } = useTheme()
-  const [mounted, setMounted] = React.useState(false)
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
-  React.useEffect(() => {
-    setMounted(true)
-  }, [])
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
-  if (!mounted) {
-    return (
-      <div className="flex items-center space-x-2">
-        <Sun className="h-4 w-4 text-muted-foreground" />
-        <Switch disabled />
-        <Moon className="h-4 w-4 text-muted-foreground" />
-      </div>
-    )
-  }
+  const handleChange = (checked: boolean) => {
+    const nextTheme = checked ? "dark" : "light";
+    setTheme(nextTheme);
+    document.cookie = `theme=${nextTheme}; path=/; max-age=31536000`;
+  };
 
-  const isDark = theme === "dark"
+  const isDark = theme === "dark";
 
   return (
     <div className="flex items-center space-x-2">
-      <Sun className={`h-4 w-4 transition-colors ${!isDark ? "text-yellow-500" : "text-muted-foreground"}`} />
-      <Switch
-        checked={isDark}
-        onCheckedChange={(checked) => setTheme(checked ? "dark" : "light")}
+      <Sun
+        className={`h-4 w-4 transition-colors ${
+          !isDark && mounted ? "text-yellow-500" : "text-muted-foreground"
+        }`}
       />
-      <Moon className={`h-4 w-4 transition-colors ${isDark ? "text-blue-400" : "text-muted-foreground"}`} />
-      <span className="sr-only">Toggle theme</span>
+      <Switch
+        checked={isDark && mounted}
+        onCheckedChange={handleChange}
+        disabled={!mounted}
+      />
+      <Moon
+        className={`h-4 w-4 transition-colors ${
+          isDark && mounted ? "text-blue-400" : "text-muted-foreground"
+        }`}
+      />
     </div>
-  )
+  );
 }
